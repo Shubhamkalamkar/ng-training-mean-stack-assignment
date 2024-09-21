@@ -1,0 +1,47 @@
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  @media (max-width: 480px) {
+    display: block;
+    text-align: center;
+  }
+
+  .form-field {
+    width: 100%;
+
+    @media (max-width: 480px) {
+      width: 77%;
+    }
+  }
+
+  .form-field.full-width {
+    grid-column: span 2;
+
+    @media (max-width: 768px) {
+      grid-column: span 1;
+    }
+  }
+
+  .form-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    @media (max-width: 768px) {
+      justify-content: space-between;
+    }
+
+    button {
+      margin-left: 8px;
+    }
+  }
+}

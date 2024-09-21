@@ -1,0 +1,77 @@
+$primary-color: #3f51b5;
+$secondary-color: #f50057;
+$background-color: #fff;
+$box-shadow-light: 0 4px 8px rgba(0, 0, 0, 0.2);
+$sticky-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+$button-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10px;
+
+  .new-task-btn {
+    margin-right: 10px;
+    background-color: $primary-color;
+    color: $background-color;
+    box-shadow: $button-shadow;
+
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+    }
+  }
+
+  .search-input {
+    width: 250px;
+
+    mat-icon {
+      color: darken($primary-color, 10%);
+    }
+
+    input {
+      padding-left: 5px;
+    }
+
+    .mat-form-field {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .task-actions {
+    flex-direction: column;
+
+    .search-input {
+      width: 100%;
+    }
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+
+  .responsive-table {
+    width: 100%;
+  }
+}
+
+.mat-table {
+  width: 100%;
+  box-shadow: $box-shadow-light;
+}
+
+.mat-paginator {
+  margin-top: 20px;
+
+  @media (max-width: 480px) {
+    display: block;
+  }
+}

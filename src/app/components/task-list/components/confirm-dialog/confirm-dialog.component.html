@@ -1,0 +1,14 @@
+<mat-card class="confirm-card">
+  <mat-card-header>
+    <mat-card-title>Delete Task</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>{{ data.message }}</p>
+  </mat-card-content>
+
+  <mat-card-actions class="confirm-card-actions" align="end">
+    <button mat-button class="cancel-button" (click)="onNoClick()">No</button>
+    <button mat-button color="warn" class="delete-button" (click)="onYesClick()">Yes</button>
+  </mat-card-actions>
+</mat-card>
